@@ -36,17 +36,17 @@ public class FileUploadController {
 	public FileUploadController(StorageService storageService) {
 		this.storageService = storageService;
 	}
-
-	@GetMapping("/")
-	public String listUploadedFiles(Model model) throws IOException {
-
-		model.addAttribute("files", storageService.loadAll().map(
-				path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
-						"serveFile", path.getFileName().toString()).build().toUri().toString())
-				.collect(Collectors.toList()));
-
-		return "uploadForm";
-	}
+	/*
+	 * @GetMapping("/") public String listUploadedFiles(Model model) throws
+	 * IOException {
+	 * 
+	 * model.addAttribute("files", storageService.loadAll().map( path ->
+	 * MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
+	 * "serveFile", path.getFileName().toString()).build().toUri().toString())
+	 * .collect(Collectors.toList()));
+	 * 
+	 * return "uploadForm"; }
+	 */
 	
 	@GetMapping("/i/{filename:.+}")
 	@ResponseBody
