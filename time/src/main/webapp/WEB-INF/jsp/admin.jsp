@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
 
 <!DOCTYPE html>
 <html>
@@ -12,12 +12,12 @@
 <body>
 <div>
   <table>
-    <thead>
+       <tr>
     <th>ID</th>
     <th>UserName</th>
     <th>Password</th>
     <th>Roles</th>
-    </thead>
+        </tr>
     <c:forEach items="${allUsers}" var="user">
       <tr>
         <td>${user.id}</td>

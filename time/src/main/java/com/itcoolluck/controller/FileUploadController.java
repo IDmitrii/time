@@ -1,4 +1,4 @@
-package com.itcoolluck;
+package com.itcoolluck.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

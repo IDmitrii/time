@@ -7,12 +7,14 @@
 <head>
   <meta charset="utf-8">
   <title>Регистрация</title>
+     <link rel="stylesheet" type="text/css" media="all" 
+          href="/css/slyle.css"  />
 </head>
 
 <body>
 <div>
   <form:form method="POST" modelAttribute="userForm">
-    <h2>Регистрация</h2>
+    <h1>Регистрация</h1>
     <div>
       <form:input type="text" path="username" placeholder="Username"
                   autofocus="true"></form:input>

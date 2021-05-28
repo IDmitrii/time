@@ -20,6 +20,8 @@ public class RegistrationController {
 
     @GetMapping("/registration")
     public String registration(Model model) {
+    	
+    	System.out.println("Hello World! eRR reg!");
         model.addAttribute("userForm", new User());
 
         return "registration";
